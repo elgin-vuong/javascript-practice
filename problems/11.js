@@ -8,7 +8,9 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    newStr = str.split(" ").join('').toLowerCase();
+    reversedStr = newStr.split('').reverse().join('');
+    return newStr == reversedStr;
 }
 
 const tests = [

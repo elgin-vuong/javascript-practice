@@ -7,7 +7,17 @@
  * @example [{name: "Chase", grade: 89}, {name: "Raman", grade: 92}] -> [{name: "Raman", grade: 92}, {name: "Chase", grade: 89}]
 */
 function problem(students) {
-    return null;
+    students.sort((a, b) => {
+        if (a.grade > b.grade) {
+            return -1;
+        } else if (a.grade < b.grade) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    })
+    return students;
 }
 
 const tests = [
